@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/Jquery.js"></script>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			.box{
+				width: 330px;
+				height: 360px;
+				margin: 0 auto;
+				margin-top: 100px;
+				position: relative;
+			}
+			.box ul{
+				width: 300%;
+			}
+			.box ul li{
+				background: #449FDB;
+				width: 330px;
+				height: 360px;
+				float: left;
+				display: none;
+			}
+			.box ul li:nth-child(2){
+				display: block;
+			}
+			.box ul li:nth-child(2){
+				background: #67A8AE;
+			}
+			.box ul li:nth-child(3){
+				background: #C81622;
+			}
+			.aplc_slide_pots{
+				position: absolute;
+				left: 50%;
+				bottom: 15px;
+				transform: translateX(-50%);
+			}
+			.aplc_slide_pots i{
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #333;
+				margin-right: 5px;
+			}
+			.aplc_slide_pots i:last-child{
+				margin-right: 0;
+			}
+			.aplc_slide_pots .active{
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul id="boxSlide1">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="aplc_slide_pots" id="pot1">
+				<i class="active"></i><i></i><i></i>
+			</div>
+		</div>
+		<div class="box">
+			<ul id="boxSlide2">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="aplc_slide_pots" id="pot2">
+				<i class="active"></i><i></i><i></i>
+			</div>
+		</div>
+		<div class="box">
+			<ul id="boxSlide3">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<div class="aplc_slide_pots" id="pot3">
+				<i class="active"></i><i></i><i></i>
+			</div>
+		</div>
+	</body>
+	<script>
+
+	$boxSlideLi1=$('#boxSlide1 li');
+	$boxSlideLi2=$('#boxSlide2 li');
+	$boxSlideLi3=$('#boxSlide3 li');
+	
+	$potsItem1=$('#pot1 i')
+	$potsItem2=$('#pot2 i')
+	$potsItem3=$('#pot3 i')
+	
+	slideshow($boxSlideLi1,$potsItem1);
+	slideshow($boxSlideLi2,$potsItem2);
+	slideshow($boxSlideLi3,$potsItem3);
+	
+	function slideshow(slider,pots){
+		pots.hover(function(){
+			$(this).addClass('active').siblings().removeClass();
+			slider.eq($(this).index()).show().siblings().hide();
+		})
+	}
+	
+	
+	
+	</script>
+</html>
