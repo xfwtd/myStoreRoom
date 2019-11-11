@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            position: relative;
+            width: 430px;
+            height: 430px;
+        }
+        .small{
+            width: 430px;
+            height: 430px;
+            /* background: url('bimg2.jpg') no-repeat 0 0; */
+            position: relative;
+        }
+        .smallImg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 430px;
+            height: 430px;
+            background: url('bimg2.jpg') no-repeat 0 0;
+        }
+        .mask{
+            display: none;
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            background: yellow;
+            opacity: .4;
+            cursor: move;
+        }
+        .big{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 440px;
+            width: 430px;
+            height: 430px;
+            overflow: hidden;
+            background: honeydew;
+        }
+        .big img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <div class="small" id="small">
+            <div class="smallImg"></div>
+            <div class="mask" id="mask"></div>
+        </div>
+        <div class="big" id="big">
+            <div class="bImg"><img src="rImg2.jpg"></div>
+        </div>
+    </div>
+</body>
+<script>
+var box=document.getElementById('box');
+var small=document.getElementById('small');
+var mask=document.getElementById('mask');
+var big=document.getElementById('big');
+var bImg=big.children[0].children[0];
+
+small.onmouseover=function(){
+    mask.style.display='block';
+    big.style.display='block';
+}
+small.onmouseout=function(){
+    mask.style.display='none';
+    big.style.display='none';
+}
+
+document.onmousemove=function(e){
+    var e=e||window.Event;
+    //x等于 鼠标的x坐标 减 大盒子的x坐标 减 遮罩的一半宽度
+    var x=e.clientX-box.offsetLeft-mask.offsetWidth/2;
+    var y=e.clientY-box.offsetTop-mask.offsetHeight/2;
+   
+    if(x<0){
+        x=0;
+        //如果x大于 左图的宽 减 遮罩的宽
+    }else if(x>small.offsetWidth-mask.offsetWidth){
+        x=small.offsetWidth-mask.offsetWidth;
+    }
+    if(y<0){
+        y=0;
+    }else if(y>small.offsetHeight-mask.offsetHeight){
+        y=small.offsetHeight-mask.offsetHeight;
+    }
+    //左图的宽 除 遮罩的宽
+    var ratio=small.offsetWidth/mask.offsetWidth;
+
+    mask.style.left=x+'px';
+    mask.style.top=y+'px';
+
+    //右图的x坐标等于 (负x 乘 大盒子宽度 除 左图宽度) 乘 （左图的宽 除 遮罩的宽）
+    bImg.style.left=(-x*box.offsetWidth/small.offsetWidth)*ratio+'px';
+    bImg.style.top=(-y*box.offsetHeight/small.offsetHeight)*ratio+'px';
+
+
+    bImg.style.width=small.offsetWidth*small.offsetWidth/mask.offsetWidth+'px';
+}
+
+</script>
+</html>
