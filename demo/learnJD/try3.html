@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原生JS实现元素拖拽</title>
+    <style>
+        *{
+            margin: 0;
+            height: 0;
+        }
+        #dragDiv{
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            cursor: move;    /*鼠标呈拖拽状*/  
+            position: absolute;    /*设置绝对定位，脱离文档流，便于拖拽时计算坐标*/  
+            background-color: navajowhite;
+        }
+    </style>
+</head>
+<body>
+    
+<div id="dragDiv"></div>
+    
+<script>
+window.onload=function(){
+	var can=document.getElementById('dragDiv');
+	drag(can);
+	function drag(obj){
+		obj.onmousedown = function(e){
+			var e = e || window.event; 
+			var divX=e.clientX-this.offsetLeft;
+			var divY=e.clientY-this.offsetTop;
+			if(obj.setCapture){
+				obj.setCapture();    // 修复低版本 IE bug
+			}
+			document.onmousemove=function(e){
+				var e = e || window.event; 
+				var disX = e.clientX - divX;
+				var disY = e.clientY - divY;
+				//控制拖拽物体的范围只能在浏览器视窗内，不允许出现滚动条或拖出可视区域
+				if(disX<0){
+					disX=0
+				}else if(disX>document.documentElement.clientWidth-obj.offsetWidth){
+					disX = document.documentElement.clientWidth - obj.offsetWidth;
+				}
+				if ( disY < 0 ) {
+					disY = 0;
+				} else if ( disY > document.documentElement.clientHeight - obj.offsetHeight ) {
+					disY = document.documentElement.clientHeight - obj.offsetHeight;
+				}
+				obj.style.left=disX+'px';
+				obj.style.top=disY+'px';
+				document.onmouseup=function(){
+					document.onmousedown=document.onmousemove=null;
+					if( obj.releaseCapture ){
+						obj.releaseCapture();    // 修复低版本 IE bug
+					}
+				}
+			}
+		}
+	}
+}
+  
+</script>
+
+</body>
+</html>

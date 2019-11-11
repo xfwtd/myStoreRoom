@@ -101,6 +101,7 @@
 	margin-left:10px;
 }
 .shopCar{
+	cursor: pointer;
 	margin:27px 0 0 110px;
 	width: 140px;
 	height: 35px;
@@ -196,12 +197,14 @@
 	height: 100%;
 }
 .sc_col3{
-	padding-top: 10px;
 	width: 250px;
 	height: 465px;
-	border: 1px solid #eee;
 	box-sizing: border-box;
 	position: relative;
+}
+.sc_col3_inner{
+	margin-top: 10px;
+	border: 1px solid #eee;
 }
 .news{
 	height: 165px;

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="utf-8" />
+	<title>首页</title>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+	<!-- 搜索条 go -->
+	<div class="search clearfix">
+		<div class="searchBar fl">
+			<i class="fa fa-search" aria-hidden="true"></i>
+			<input placeholder="搜索:目的地/酒店/景点/航班号" />
+		</div>
+		<div class="me fr">
+			<div class="headImg"></div>
+			<span>我的</span>
+		</div>
+	</div>
+	<!-- 搜索条 end -->
+
+	<!-- 轮播图 go -->
+	<div class="banner">
+		<div class="swiper_container" id="swiper_container">
+			<ul class="swiper_wrap clearfix" id="swiper_wrap">
+				<li class="swiper_slide swiper_slide_one"></li>
+				<li class="swiper_slide swiper_slide_two"></li>
+				<li class="swiper_slide swiper_slide_three"></li>
+				<li class="swiper_slide swiper_slide_four"></li>
+				<li class="swiper_slide swiper_slide_five"></li>
+			</ul>
+		</div>
+		<ul class="dots" id="dots">
+			<!-- <li class="bullet bullet_active"></li>
+			<li class="bullet"></li>
+			<li class="bullet"></li>
+			<li class="bullet"></li>
+			<li class="bullet"></li> -->
+		</ul>
+	</div>
+	<!-- 轮播图 end -->
+
+	<!-- 导航栏 go -->
+	<ul class="localNav">
+		<li>
+			<a href="#">
+				<div class="localNav_icon"></div>
+				<span>攻略·景点</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="localNav_icon"></div>
+				<span>门票·玩乐</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="localNav_icon"></div>
+				<span>美食林</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="localNav_icon"></div>
+				<span>周边游</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<div class="localNav_icon"></div>
+				<span>一日游</span>
+			</a>
+		</li>
+	</ul>
+	<!-- 导航栏 end -->
+
+	<!-- 导航表格 go -->
+	<div class="gridNav">
+		<div class="gridNav_row">
+			<div class="gridNav_item gridNav_item_hotel">
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+				<div class="gridNav_item_piece">
+					<span></span>
+				</div>
+			</div>
+			<div class="gridNav_item">
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+			</div>
+			<div class="gridNav_item">
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+			</div>
+		</div>
+		<div class="gridNav_row">
+			<div class="gridNav_item gridNav_item_flight">
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+				<div class="gridNav_item_piece">
+					<span></span>
+				</div>
+			</div>
+			<div class="gridNav_item">
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+			</div>
+			<div class="gridNav_item">
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+			</div>
+		</div>
+		<div class="gridNav_row">
+			<div class="gridNav_item gridNav_item_travel">
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+				<div class="gridNav_item_piece">
+					<span></span>
+				</div>
+			</div>
+			<div class="gridNav_item">
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+			</div>
+			<div class="gridNav_item">
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+				<div class="gridNav_item_piece">
+					<span>酒店</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 导航表格 end -->
+
+	<!-- 酒店机票旅游 go -->
+	<ul class="subNav clearfix">
+		<li>
+			<ul class="subNav_row">
+				<li>
+					<a href="#">
+						<div class="subNav_icon"></div>
+						<span>自由行</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="subNav_icon"></div>
+						<span>自由行</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="subNav_icon"></div>
+						<span>自由行</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="subNav_icon"></div>
+						<span>自由行</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="subNav_icon"></div>
+						<span>自由行</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="subNav_row">
+				<li>
+					<a href="#">
+						<div class="subNav_icon"></div>
+						<span>自由行</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="subNav_icon"></div>
+						<span>自由行</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="subNav_icon"></div>
+						<span>自由行</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="subNav_icon"></div>
+						<span>自由行</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="subNav_icon"></div>
+						<span>自由行</span>
+					</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<!-- 酒店机票旅游 end -->
+
+	<!-- 热门活动 go -->
+	<div class="hotEvent">
+		<div class="sales_hd">
+			<h2 class="title title_event">热门活动<i></i></h2>
+			<a href="#" class="button_gradient">获取更多福利</a>
+		</div>
+		<div class="eventList">
+			<div class="sales_bd">
+				<div class="row">
+					<div class="col col_50">
+						<p>
+							<img src="./img/event1.png" />
+						</p>
+					</div>
+					<div class="col col_50">
+						<p>
+							<img src="./img/event2.png" />
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col_50">
+						<p>
+							<img src="./img/event3.png" />
+						</p>
+					</div>
+					<div class="col col_50">
+						<p>
+							<img src="./img/event3.png" />
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col_50">
+						<p>
+							<img src="./img/event3.png" />
+						</p>
+					</div>
+					<div class="col col_50">
+						<p>
+							<img src="./img/event3.png" />
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 热门活动 end -->
+
+	<!-- 页脚 go -->
+	<footer class="tool_box">
+		<div class="tool_cn">
+			<a href="#">
+				<i class="fa fa-phone" aria-hidden="true"></i>
+				<span>电话预定</span>
+			</a>
+
+			<a href="#">
+				<i class="fa fa-download" aria-hidden="true"></i>
+				<span>下载客户端</span>
+			</a>
+
+			<a href="#">
+				<i class="fa fa-user-md" aria-hidden="true"></i>
+				<span>我的</span>
+			</a>
+		</div>
+		<div class="tool_ver">
+			<a href="#">网站地图</a>
+			<a class="spacer">|</a>
+			<a href="#" class="tool_languague">
+				<i class="fa fa-globe" aria-hidden="true"></i>
+				languague
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
+			</a>
+			<a class="spacer">|</a>
+			<a href="#">电脑版</a>
+		</div>
+		<p><label>2018</label>携程旅行|<a href="#" class="link_icp">沪ICP备08023580号</a></p>
+	</footer>
+	<!-- 页脚 end -->
+</body>
+<script src="./js/index.js"></script>
+</html>

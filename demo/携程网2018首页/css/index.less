@@ -1,0 +1,428 @@
+body{
+    background: #F2F2F2;
+}
+// 搜索条 go
+.search{
+    width: 100%;
+    max-width: 540px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 12px;
+    background: #F6F6F6;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+        .searchBar{
+            height: 28px;
+            line-height: 20px;
+            padding: 2px 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px;
+            background-color: #fff;
+            color: #666;
+            font-size: .94rem;
+            flex: 1;
+            box-sizing: border-box;
+            position: relative;
+            i{
+                color: #099FDE;
+                font-size: 14px;
+            }
+            input{
+                border: none;
+                outline: none;
+            }
+        }
+        .me{
+            width: 51px;
+            height: 44px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: .75rem;
+            line-height: 1;
+            box-sizing: border-box;
+            padding-right: 4px;
+            .headImg{
+                background: #099FDE;
+                width: 22px;
+                height: 22px;
+                margin-bottom: 1px;
+                display: block;
+            }
+            span{
+                color: #099FDE;
+                font-size: .75rem;
+                line-height: 1;
+            }
+        }
+}
+// 搜索条 end
+
+// 轮播图 go
+.banner{
+    position: relative;
+    margin-bottom: 10px;
+    .swiper_container{
+        width: 100%;
+        overflow: hidden;
+        .swiper_wrap{
+            width: 500%;
+            .swiper_slide{
+                width: 375px;
+                height: 187.5px;
+                float: left;
+            }
+            .swiper_slide_one{
+                background: cornflowerblue;
+            }
+            .swiper_slide_two{
+                background: violet;
+            }
+            .swiper_slide_three{
+                background: crimson;
+            }
+            .swiper_slide_four{
+                background: aquamarine;
+            }
+            .swiper_slide_five{
+                background: wheat;
+            }
+        }
+    }
+    .dots{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        .bullet{
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #000;
+            opacity: .2;
+            margin: 0 2px;
+        }
+        .bullet_active{
+            background: #fff ;
+            opacity: 1 ;
+            width: 25px ;
+            border-radius: 32px ;
+        }
+    }
+}
+// 轮播图 end
+
+// 导航栏 go
+.localNav{
+    background: #fff;
+    border-radius: 8px;
+    margin:0 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0 8px;
+    li{
+        flex: 1;
+        a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: .75rem;
+            line-height: 1;
+            color: #222;
+            position: relative;
+            .localNav_icon{
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                background: url('../img/nav.png') 0 -80px no-repeat;
+                background-size: 40px auto;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+// 导航栏 end
+
+// 导航表格 go
+.gridNav{
+    background: #fff;
+    border-radius: 8px;
+    margin:0 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .gridNav_row{
+        width: 100%;
+        display: flex;
+        align-content: flex-start;
+        justify-content: flex-start;
+        color: #fff;
+        border-bottom: 3px solid #fff;
+        &:first-child{
+            background: linear-gradient(90deg,#FA5956,#FA9A4D);
+        }
+        &:nth-child(2){
+            background: linear-gradient(90deg,#4B8FED,#53BBED);
+        }
+        &:nth-child(3){
+            background: linear-gradient(90deg,#34C2A9,#6CD558);
+            border-bottom: none;
+        }
+        .gridNav_item{
+            border-left: 1px solid #f2f2f2;
+            box-sizing: border-box;
+            color: #fff;
+            flex: 1;
+            line-height: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            &:first-child .gridNav_item_piece{
+                border-bottom: none;
+            }
+            .gridNav_item_piece{
+                flex: 1;
+                padding: .6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 1px solid #F2F2F2;
+                &:nth-child(2){
+                    border-bottom: none;
+                }
+            }
+        }
+        .gridNav_item_hotel{
+            background-image: url('../img/gridNav_hotel.png');
+            background-size: 90px auto;
+            border-top-left-radius: 8px;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+        .gridNav_item_flight{
+            background-image: url('../img/gridNav_flight.png');
+            background-size: 90px auto;
+            border-top-left-radius: 8px;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+        .gridNav_item_travel{
+            background-image: url('../img/gridNav_travel.png');
+            background-size: 90px auto;
+            border-top-left-radius: 8px;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+    }
+}
+// 导航表格 end
+
+// 酒店机票旅游 go
+.subNav{
+    background: #fff;
+    border-radius: 8px;
+    margin:0 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0 8px;
+    li{
+        width: 100%;
+        .subNav_row{
+            display: flex;
+            li{
+                flex: 1;
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    box-sizing: border-box;
+                    font-size: .63rem;
+                    color: #222;
+                    line-height: 1;
+                    position: relative;
+                    .subNav_icon{
+                        width: 28px;
+                        height: 28px;
+                        //background: url('../img/subNav.png') 0 0 no-repeat;
+
+                        background-image: url('../img/subNav.png');
+                        background-size: 28px auto;
+                        background-repeat: no-repeat;
+                        margin-top: .63rem;
+                        margin-bottom: .31rem;
+                    }
+                }
+            }
+        }
+    }
+}
+// 酒店机票旅游 end
+
+// 活动栏公共样式 go
+.sales_box{
+    margin-bottom: 8px;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-width: 1px 0;
+}
+.sales_hd{
+    padding: 0 8px;
+    background: #fff;
+    height: 44px;
+    line-height: 44px;
+    overflow: hidden;
+    padding-bottom: 1px;
+    position: relative;
+    .title{
+        height: 44px;
+        overflow: hidden;
+        font-style: italic;
+        font-weight: bold;
+        color: #FFAE47;
+    }
+    .button_gradient{
+        position: absolute;
+        right: 8px;
+        top: 11px;
+        display: inline-block;
+        padding: 0 1.13rem 0 .75rem;
+        height: 20px;
+        line-height: 20px;
+        color: #fff;
+        border-radius: .63rem;
+        font-size: .75rem;
+        background: linear-gradient(to right,#ff4e63,#ff6cc9);
+    }
+    .button_gradient::after{
+        content: '';
+        position: absolute;
+        top: 6px;
+        right: 9px;
+        width: 7px;
+        height: 7px;
+        border: 2px solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(-45deg);
+    }
+}
+.row{
+    display: flex;
+    box-sizing: border-box;
+}
+.col{
+    flex: 1;
+    display: block;
+    box-sizing: border-box;
+}
+.col_50{
+    flex: 0 0 50%;
+    max-width: 50%;
+    img{
+        display: block;
+        max-width: 100%;
+    }
+}
+// 活动栏公共样式 end
+
+// 热门活动 go
+.hotEvent{
+    padding-top: 1px;
+    margin-bottom: 10px;
+    .title_event{
+        i{
+            left: 90px;
+            background: url('../img/event_hd_icon.png') no-repeat;
+            background-size: 36px auto;
+            width: 36px;
+            height: 15px;
+            transform: translateY(-50%);
+            top: 50%;
+            position: absolute;
+            display: inline-block;
+        }
+    }
+    .eventList{
+        .row{
+            padding-top: 1px;
+            .col{
+                min-height: 5rem;
+                position: relative;
+                text-align: right;
+                padding-left: 1px;
+            }
+        }
+    }
+}
+// 热门活动 end
+
+// 页脚 go
+.tool_box{
+    padding-top: 1px;
+    width: 100%;
+    padding-bottom: 5px;
+    text-align: center;
+    .tool_cn{
+        margin-bottom: 5px;
+        background-color: #fff;
+        border-top: 1px solid #c2c2c2;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            position: relative;
+            flex: 1;
+            color: #333;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px 0;
+            i{
+                font-size: 20px;
+                margin-bottom: 2px;
+            }
+            span{
+                color: #333;
+                font-size: 12px;
+            }
+        }
+    }
+    .tool_ver{
+        color: #999;
+        a{
+            font-size: 12px;
+            color: #666;
+        }
+        .spacer{
+            margin: 0 5px;
+        }
+        .tool_languague{
+            i{
+                font-size: 11px;
+            }
+        }
+    }
+    p{
+        margin: 0;
+        padding: 5px 0;
+        color: #999;
+        font-size: 12px;
+        .link_icp{
+            color: #999;
+        }
+    }
+}
+// 页脚 end
