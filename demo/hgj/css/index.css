@@ -1,0 +1,401 @@
+.content{
+
+}
+/*第一横排内容开始*/
+.upper{
+    height: 320px;
+    margin-top: 20px;
+}
+/*banner开始*/
+.upper .banner{
+    width: 520px;
+    height: 320px;
+    background-image: url(../images/banner1.jpg);
+    margin-right: 20px;
+    position: relative;
+}
+.upper .banner div{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+    height: 80px;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.5);
+}
+.upper .banner div h3{
+    color: #fff;
+}
+.upper .banner div p{
+    color: #fff;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*banner结束*/
+/*第一横排“中”栏开始*/
+.upper .banner_small{
+    width: 300px;
+    height: 100%;
+    margin-right: 20px;
+}
+.upper .banner_small a{
+    display: block;
+    width: 300px;
+    height: 150px;
+    background: url(../images/Pages20_1.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.upper .banner_small a:last-child{
+    margin-top: 20px;
+    background: url(../images/Pages25_1.jpg) no-repeat;
+    background-size: cover;
+}
+.upper .banner_small a div{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*第一横排“中”栏结束*/
+/*第一横排“右”栏开始*/
+.upper .hotTopic{
+    width: 330px;
+    height: 320px;
+    padding: 0 14px 14px 14px;
+    box-sizing: border-box;
+    border: 1px solid #E2E2E2;
+}
+.upper .hotTopic>h1{
+    height: 39px;
+    line-height: 39px;
+    border-bottom: 1px solid #E2E2E2;
+}
+.upper .hotTopic .show{
+    height: 99px;
+    margin-top: 15px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed #E2E2E2;
+}
+.upper .hotTopic .show div{
+    width: 172px;
+}
+.upper .hotTopic .show>div p{
+    margin-top: 5px;
+    text-indent: 2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.upper .hotTopic .show>a{
+    display: block;
+    width: 120px;
+    height: 100px;
+    background: url("../images/Pages3_1.jpg");
+    background-size: cover;
+}
+.list{
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.list ul li{
+    list-style-type: square;
+    margin-top: 5px;
+}
+.list ul li a{
+    color: #444444;
+    font-size: 14px;
+}
+.list ul li a:hover{
+    color: #FF5500;
+}
+/*第一横排右栏结束*/
+/*第一横排内容结束*/
+
+/*第二横排内容开始*/
+.middle{
+    height: 445px;
+    margin-top: 20px;
+}
+/*第二横排左大栏开始*/
+.middle .news{
+    width: 840px;
+    margin-right: 20px;
+}
+.title{
+    height: 40px;
+    border-bottom: 1px solid #E2E2E2;
+    line-height: 40px;
+}
+.title h1{
+    line-height: 22px;
+    border-left: 4px solid #DD0077;
+    padding-left: 5px;
+    margin-top: 10px;
+}
+.middle .news .news_content{
+    margin-top: 15px;
+}
+.middle .news .news_content .news_content_l{
+    border-bottom: 1px dashed #E2E2E2;
+    width: 320px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+.middle .news .news_content .news_content_l .news_l_pic{
+    display: block;
+    width: 320px;
+    height: 200px;
+    background: url(../images/Pages1_1.jpg) no-repeat;
+    background-size: cover;
+    margin-bottom: 8px;
+}
+.middle .news .news_content .news_content_l h3{
+    font-weight: normal;
+    white-space: normal;
+}
+.middle .news .news_content .news_content_l .label{
+    margin-top: 15px;
+}
+.label{
+    height: 21px;
+    line-height: 16px;
+    font-size: 14px;
+    margin: 10px 0 0 0;
+}
+.label>span{
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    background: url(../images/icon.png) no-repeat;
+    background-position: 0 -7px;
+}
+.middle .news .news_content .news_content_l p{
+    width: 320px;
+}
+.middle .news .news_content .news_content_r{
+    width: 500px;
+    height: 100%;
+}
+.middle .news .news_content .news_content_r .content_r_item{
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #E2E2E2;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.middle .news .news_content .news_content_r .content_r_item:last-child{
+    margin-bottom: 0;
+}
+.middle .news .news_content .news_content_r .content_r_item .label{
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+.middle .news .news_content .news_content_r .content_r_item>a{
+    background: url("../images/Pages2_1.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: block;
+    width: 125px;
+    height: 80px;
+    margin: 0 15px 0 0;
+}
+.middle .news .news_content .news_content_r .content_r_item .label{
+    width: 360px;
+}
+/*第二横排左大栏结束*/
+/*第二横排右大栏栏开始*/
+.middle .update{
+    width: 330px;
+    height: 440px;
+    padding: 0 14px 14px 14px;
+    box-sizing: border-box;
+    border: 1px solid #E2E2E2;
+}
+.middle .update>h1{
+    height: 39px;
+    line-height: 39px;
+    border-bottom: 1px solid #E2E2E2;
+}
+.middle .update .pic_side{
+    display: block;
+    width: 300px;
+    height: 145px;
+    background: url(../images/Pages4_1.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    margin-top: 15px;
+    position: relative;
+}
+.middle .update .pic_side div{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    background: rgba(0,0,0,0.5);
+}
+.middle .update .pic_side div p{
+    color: #fff;
+    text-align: center;
+}
+/*第二横排右大栏栏结束*/
+/*第二横排内容结束*/
+/*第三横排内容开始*/
+.policy{
+    margin-top: 20px;
+}
+.policy .policy_content{
+    margin-top: 15px;
+}
+.policy .policy_content ul li{
+    width: 225px;
+    background-color: #f7f7f7;
+    padding-bottom: 10px;
+    float: left;
+    line-height: normal;
+    margin-left: 16px;
+}
+.policy .policy_content ul li a img{
+    width: 100%;
+}
+.policy .policy_content ul li .p1{
+    margin: 10px 0 10px 15px;
+}
+.policy .policy_content ul li .p2{
+    margin-left: 15px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.policy .policy_content ul li:first-child{
+    margin-left: 0;
+}
+/*第三横排内容结束*/
+/*第四横排内容开始*/
+.newbieAndStrategy{
+    margin-top: 20px;
+}
+/*第四横排左栏内容开始*/
+.newbieAndStrategy .newbie{
+    width: 840px;
+}
+.newbie .newbie_content{
+    margin-top: 15px;
+}
+.newbie .newbie_content ul li{
+    padding: 18px 0;
+    border-bottom: dashed 1px #E2E2E2;
+}
+.newbie .newbie_content ul li>a{
+    display: block;
+    width: 210px;
+    height: 125px;
+    overflow: hidden;
+}
+.newbie .newbie_content ul li>a img{
+    width: 100%;
+}
+.newbie .newbie_content ul li .newbie_content_write{
+    width: 610px;
+}
+.newbie .newbie_content ul li .newbie_content_write h3{
+    padding: 0px 0px 5px 0px;
+}
+.newbie .newbie_content ul li .newbie_content_write p{
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+/*第四横排左栏内容结束*/
+/*第四横排右栏内容开始*/
+.strategy{
+    width: 330px;
+}
+.strategy .strategy_content ul li{
+    margin-top: 15px;
+    background-color: #F7F7F7;
+}
+.strategy .strategy_content ul li p{
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.strategy .strategy_content ul li:first-child .a1{
+    display: block;
+    width: 330px;
+    height: 160px;
+    overflow: hidden;
+}
+.strategy .strategy_content ul li:first-child .a1 img{
+    width: 100%;
+}
+.strategy .strategy_content ul li .a2{
+    margin: 0 15px;
+    line-height: 36px;
+}
+.strategy .strategy_content ul li:first-child p{
+    padding: 0px 15px 10px 15px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+/*第四横排右栏内容结束*/
+/*第四横排内容结束*/
+/*第五横排内容开始*/
+.trends{
+    margin-top: 20px;
+}
+/*第五横排左栏内容开始*/
+.trends .sense_l{
+    width: 400px;
+}
+.trends .sense_l ul li{
+    margin-top: 15px;
+    background-color: #F7F7F7;
+}
+.trends .sense_l ul li a{
+    margin: 0 15px;
+    line-height: 31px;
+}
+/*第五横排左栏内容结束*/
+/*第五横排右栏内容开始*/
+.trends .sense_r{
+    width: 770px;
+    margin-top: 15px;
+}
+.trends .sense_r>a{
+    width: 320px;
+    height: 167px;
+    overflow: hidden;
+}
+.trends .sense_r>a img{
+    width: 100%;
+}
+.trends .sense_r .sense_r_content{
+    padding-top: 8px;
+    width: 430px;
+    border-bottom: dashed 1px #E2E2E2;
+    padding-bottom: 10px;
+}
+.trends .sense_r .sense_r_content .label{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.trends .sense_r .sense_r_content p{
+
+}
+/*第五横排右栏内容结束*/
+/*第五横排内容结束*/
